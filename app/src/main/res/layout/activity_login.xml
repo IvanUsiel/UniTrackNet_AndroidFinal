@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.auth.LoginActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBottomImgaen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glLineTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHalfScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".50" />
+
+    <TextView
+        android:id="@+id/TvTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:fontFamily="@font/theseasons_reg"
+        android:text="@string/bienvenido"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@id/glHalfScreen"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/glTop" />
+
+    <TextView
+        android:id="@+id/TvTile2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:fontFamily="@font/theseasons_reg"
+        android:text="@string/unitracknet"
+        android:textColor="@color/green_theme"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glHalfScreen"
+        app:layout_constraintTop_toBottomOf="@id/glTop" />
+
+    <TextView
+        android:id="@+id/TvMini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/desarrollado_por_gsop"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/glHalfScreen"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/TvTitle1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LTietEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:hint="@string/id_username"
+        android:textColorHint="@color/white_ligth"
+        app:boxStrokeColor="@color/green_theme"
+        app:hintTextColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/glLineTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#252525"
+            android:textColor="#c4c4c4"
+            android:textColorHint="#c4c4c4" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LTietPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/passwordlogin"
+        android:textColorHint="#c4c4c4"
+        app:boxStrokeColor="@color/green_theme"
+        app:endIconMode="password_toggle"
+        app:hintTextColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/LTietEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPsw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_black"
+            android:inputType="textPassword"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/white_ligth" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/rememberMeCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/recordarme"
+        android:textColor="@color/white_ligth"
+        android:textSize="14sp"
+        app:buttonTint="@color/green_theme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LTietPass" />
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:fontFamily="@font/montserrat_bold"
+        android:padding="12dp"
+        android:text="@string/iniciar_sesi_n"
+        android:textColor="@color/white"
+        app:cornerRadius="16dp"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/rememberMeCheckbox"
+        app:strokeColor="@color/green_theme"
+        app:strokeWidth="3dp" />
+
+    <View
+        android:id="@+id/bottomLine1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@id/btnLogin"
+        app:layout_constraintBottom_toTopOf="@id/glBottomImgaen"
+        app:layout_constraintEnd_toStartOf="@id/TvOrSign"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TvOrSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/or_sign_in_with"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toTopOf="@id/glBottomImgaen"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart" />
+
+    <View
+        android:id="@+id/bottomLine2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@id/btnLogin"
+        app:layout_constraintBottom_toTopOf="@id/glBottomImgaen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/TvOrSign" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/biometricIcon"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/cono_biom_trico"
+        android:src="@drawable/image_fingerprint"
+        app:layout_constraintBottom_toTopOf="@id/glBottom"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/glBottomImgaen"
+        app:shapeAppearanceOverlay="@style/ImageRounded" />
+
+
+    <TextView
+        android:id="@+id/TvAccountCuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/no_tienes_cuenta"
+        android:textColor="@color/gray"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/glHalfScreen"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/glBottom" />
+
+    <TextView
+        android:id="@+id/TvAccountAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/contacta_sg_sord"
+        android:textColor="@color/green_theme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/TvAccountCuestion"
+        app:layout_constraintTop_toBottomOf="@id/glBottom" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

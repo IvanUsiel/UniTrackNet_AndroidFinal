@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_topology"
+        android:icon="@drawable/ic_home"
+        android:title="@string/topolog_a" />
+    <item
+        android:id="@+id/nav_alarms"
+        android:icon="@drawable/ic_alarm"
+        android:title="@string/alarmas" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_person"
+    android:title="@string/perfil" />
+</menu>
