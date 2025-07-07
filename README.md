@@ -12,14 +12,14 @@
 
 # UniTrackNet Android
 
-**UniTrackNet** es una aplicación iOS de monitoreo y gestión de redes, diseñada para optimizar el control de enlaces y sesiones de routers utilizados por **UNINET**, especialmente aquellos que operan con los protocolos **BGP** y **OSPF** entre **Estados Unidos y México**.  
+**UniTrackNet** es una aplicación Android de monitoreo y gestión de redes, diseñada para optimizar el control de enlaces y sesiones de routers utilizados por **UNINET**, especialmente aquellos que operan con los protocolos **BGP** y **OSPF** entre **Estados Unidos y México**.  
 Está enfocada en la **detección temprana de fallas de red**, alertas en tiempo real y acciones proactivas desde una interfaz intuitiva para operadores.
 
 ---
 
 ## Objetivo del App
 
-El objetivo principal de UniTrackNet iOS es:
+El objetivo principal de UniTrackNet Android es:
 
 - Proporcionar monitoreo en tiempo real de sesiones BGP/OSPF.
 - Visualizar el estado de enlaces y sesiones activas en routers UNINET.
